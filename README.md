@@ -1,0 +1,2 @@
+# excel_progressbar_class
+プログレスバーをステータスバーに表示するクラス
