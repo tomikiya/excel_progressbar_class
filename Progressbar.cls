@@ -55,7 +55,7 @@ Private Sub DisplayProgressbar()
     End If
 End Sub
 
-Private Function CalculatePercent()
+Private Function CalculatePercent() As Long
     If pValue >= pMax Then
         CalculatePercent = 100
     ElseIf pValue < 0 Then
