@@ -15,7 +15,9 @@ Private per As Long
 Private commentString As String
 
 Public Property Let ProgressMax(ByVal v As Long)
-    pMax = v
+    With Application.WorksheetFunction
+        pMax = .Max(0, v)
+    End With
 End Property
 Public Property Get ProgressMax() As Long
     ProgressMax = pMax
@@ -30,7 +32,9 @@ Public Property Get ProgressValue() As Long
 End Property
 
 Public Property Let ProgressLength(ByVal v As Long)
-    pLength = v
+    With Application.WorksheetFunction
+        pLength = .Max(1, .Min(100, v))
+    End With
 End Property
 
 Public Property Let Comment(ByVal s As String)
