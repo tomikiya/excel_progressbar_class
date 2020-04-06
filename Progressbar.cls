@@ -37,6 +37,10 @@ Public Property Let Comment(ByVal s As String)
     commentString = s
 End Property
 
+Private Sub Class_Initialize()
+    Call Init
+End Sub
+
 Public Sub Init()
     pMax = 100
     pValue = 0
